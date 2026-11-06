@@ -175,7 +175,7 @@ class MainActivity : Activity() {
     }
 
     private fun currentNumberHasDecimal(): Boolean {
-        val current = expression.toString().substringAfterLast(Regex("[+−×÷%]"))
+        val current = expression.toString().substringAfterLast("+").substringAfterLast("−").substringAfterLast("×").substringAfterLast("÷").substringAfterLast("%")
         return current.contains(".")
     }
 
